@@ -1,0 +1,33 @@
+executable = "clarisse"
+schema = "avalon-core:application-1.0"
+application_dir = "clarisse"
+label = "Clarisse iFX"
+
+# Arguments passed to the executable on launch
+#arguments = [ "--nc","-proj", "{AVALON_WORKDIR}",]
+
+# Name of the executable on the local computer.
+# This name must be available via the users `PATH`.
+# That is, the user must be able to type this into
+# the terminal to launch said application.
+#executable = "maya2016"
+#description = ""
+
+# Files copied into the application directory on launch
+#[copy]
+#"{AVALON_CORE}/res/workspace.mel" = "workspace.mel"
+
+# The environment variables overrides any previously set
+# variables from the parent process.
+[environment]
+#MAYA_DISABLE_CLIC_IPM = "Yes"  # Disable the AdSSO process
+#MAYA_DISABLE_CIP = "Yes"  # Shorten time to boot
+#MAYA_DISABLE_CER = "Yes"
+PYTHONPATH = [
+#    "{PYBLISH_NUKE}/pyblish_nuke/pythonpath",
+#   "{AVALON_CORE}/avalon/nuke/pythonpath",
+	"/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/lib/python2.7",
+	#"PYTHONPATH=/System/Library/Frameworks/Python.framework/Versions/2.7/lib",
+	"/Applications/Isotropix/Clarisse iFX 4.0 SP3/clarisse.app/Contents/MacOS/python",
+    "{PYTHONPATH}"
+]
